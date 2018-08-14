@@ -12,6 +12,10 @@ ul {
   margin: 0;
   padding: 0; }
 
+.object-fit-img {
+  object-fit: contain;
+  font-family: "object-fit: contain;"; }
+
 .header {
   position: relative; }
   .header .logo {
@@ -44,38 +48,40 @@ ul {
       .header .pc_navi li a {
         text-decoration: none;
         display: block; }
-  .header .sp_navi {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    z-index: 40;
-    width: 76px;
-    max-width: 100%; }
-    .header .sp_navi .sp_navi_btn {
-      max-width: 100%;
-      box-sizing: border-box; }
-  .header .sp_navi_li {
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 30;
-    padding-top: 30%;
-    display: none; }
-    .header .sp_navi_li li {
-      padding: 5px; }
-      .header .sp_navi_li li:first-child {
-        padding-top: 0; }
-      .header .sp_navi_li li a img {
-        width: 100%;
+  .header .sp_navi_wrapper {
+    position: relative; }
+    .header .sp_navi_wrapper .sp_navi {
+      position: fixed;
+      top: 2%;
+      right: 4%;
+      z-index: 40;
+      width: 76px;
+      max-width: 100%; }
+      .header .sp_navi_wrapper .sp_navi .sp_navi_btn {
+        max-width: 100%;
         box-sizing: border-box; }
-      .header .sp_navi_li li:last-child {
-        max-width: 3%;
-        margin: 0 auto;
-        padding: 15px 0 20px; }
-        .header .sp_navi_li li:last-child img {
+    .header .sp_navi_wrapper .sp_navi_li {
+      background-color: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 30;
+      padding-top: 30%;
+      display: none; }
+      .header .sp_navi_wrapper .sp_navi_li li {
+        padding: 5px; }
+        .header .sp_navi_wrapper .sp_navi_li li:first-child {
+          padding-top: 0; }
+        .header .sp_navi_wrapper .sp_navi_li li a img {
           width: 100%;
           box-sizing: border-box; }
+        .header .sp_navi_wrapper .sp_navi_li li:last-child {
+          max-width: 3%;
+          margin: 0 auto;
+          padding: 15px 0 20px; }
+          .header .sp_navi_wrapper .sp_navi_li li:last-child img {
+            width: 100%;
+            box-sizing: border-box; }
   .header #full {
     margin-top: -50px; }
   .header .cover_read {
@@ -131,22 +137,27 @@ main .section_title {
     margin-top: 10px; }
 main .section_text {
   color: #fff; }
-main .menu {
+main .menu .section_title {
+  padding-top: 50px; }
+main .menu .menu_box_wrapper {
   display: flex; }
-  main .menu .menu_text {
+  main .menu .menu_box_wrapper .menu_text_box {
+    line-height: 2;
     width: 60%;
     background-color: #130d09;
+    padding-left: 5%;
+    padding-bottom: 10%;
     position: relative; }
-    main .menu .menu_text .section_title {
-      padding-top: 50px; }
-    main .menu .menu_text .menu_text_box {
-      line-height: 2; }
-      main .menu .menu_text .menu_text_box p span {
-        background-color: #130d09; }
-  main .menu .menu_image {
+    main .menu .menu_box_wrapper .menu_text_box p span {
+      background-color: #130d09; }
+  main .menu .menu_box_wrapper .menu_image {
     width: 40%; }
-    main .menu .menu_image img {
-      height: 100%; }
+    main .menu .menu_box_wrapper .menu_image img {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      object-fit: cover;
+      object-position: 0 100%; }
 main .uppercase {
   text-transform: uppercase; }
 main .access {
@@ -163,7 +174,6 @@ main .reservation {
   main .reservation .section_title {
     padding-top: 50px; }
   main .reservation .reservation_box {
-    width: 100%;
     box-sizing: border-box;
     margin: 50px auto 0;
     text-align: center;
@@ -255,13 +265,10 @@ footer {
     display: none; }
   #contents .about .section_title {
     padding-top: 60px; }
-  #contents .menu .menu_text .section_title {
-    text-align: left;
-    padding-left: 10%; }
-  #contents .menu .menu_text .menu_text_box {
-    position: absolute;
-    left: 10%;
-    right: -40%; }
+  #contents .menu .menu_text_box .section_title {
+    text-align: left; }
+  #contents .menu .menu_text_box p {
+    width: 120%; }
   #contents .reservation_box p {
     font-size: 0.9rem; }
   #contents .reservation_box .information {
@@ -279,10 +286,8 @@ footer {
     display: none; }
   #contents .about .section_title {
     padding-top: 80px; }
-  #contents .menu_text_box {
-    position: absolute;
-    left: 10%;
-    right: -20%; }
+  #contents .menu_text_box p {
+    width: 110%; }
   #contents .information {
     padding: 40px; }
 
@@ -295,15 +300,14 @@ footer {
     font-size: 1.7rem; }
   #contents .about_text {
     font-size: 1.2rem; }
-  #contents .menu .menu_text .menu_text_box {
+  #contents .menu .menu_box_wrapper .menu_text_box {
     padding: 30px 40px 30px 140px; }
-    #contents .menu .menu_text .menu_text_box p {
+    #contents .menu .menu_box_wrapper .menu_text_box p {
       font-size: 1.2rem; }
-  #contents .menu .menu_image img {
-    width: 100%; }
-  #contents .reservation .reservation_box {
+
+  .reservation .reservation_box {
     width: 60%; }
-  #contents .reservation .information {
+  .reservation .information {
     padding: 0 55px 35px; }
 
   footer h4 img {
