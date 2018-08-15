@@ -12,6 +12,9 @@ ul {
   margin: 0;
   padding: 0; }
 
+p {
+  margin: 0; }
+
 .object-fit-img {
   object-fit: contain;
   font-family: "object-fit: contain;"; }
@@ -52,7 +55,7 @@ ul {
     position: relative; }
     .header .sp_navi_wrapper .sp_navi {
       position: fixed;
-      top: 2%;
+      top: 1%;
       right: 4%;
       z-index: 40;
       width: 76px;
@@ -148,8 +151,10 @@ main .menu .menu_box_wrapper {
     padding-left: 5%;
     padding-bottom: 10%;
     position: relative; }
-    main .menu .menu_box_wrapper .menu_text_box p span {
-      background-color: #130d09; }
+    main .menu .menu_box_wrapper .menu_text_box .menu_text {
+      padding-top: 10%; }
+      main .menu .menu_box_wrapper .menu_text_box .menu_text span {
+        background-color: #130d09; }
   main .menu .menu_box_wrapper .menu_image {
     width: 40%; }
     main .menu .menu_box_wrapper .menu_image img {
@@ -170,6 +175,7 @@ main .reservation {
   background-image: url("../images/top/reservation_bg-min.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   padding-bottom: 50px; }
   main .reservation .section_title {
     padding-top: 50px; }
@@ -242,7 +248,11 @@ footer {
   #contents .header .pc_navi {
     display: none; }
   #contents .header .logo {
-    width: 25%; }
+    width: 25%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%; }
   #contents .header .scroll {
     display: none; }
   #contents .section_title {
@@ -252,7 +262,7 @@ footer {
   #contents .about .section_title {
     padding-top: 20px; }
   #contents .about .about_text {
-    padding: 30px 10px 60px;
+    padding: 0 10px 60px;
     line-height: 2; }
   #contents .information {
     padding: 15px; }
@@ -263,8 +273,6 @@ footer {
     display: none; }
   #contents .about .flame, #contents .about .flame_bottom {
     display: none; }
-  #contents .about .section_title {
-    padding-top: 60px; }
   #contents .menu .menu_text_box .section_title {
     text-align: left; }
   #contents .menu .menu_text_box p {

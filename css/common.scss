@@ -13,10 +13,12 @@ ul{
     margin:0;
     padding: 0;
 }
-
+p{
+    margin: 0;
+}
 // <!--IE/Edge-->
 .object-fit-img {
-     object-fit: contain;
+    object-fit: contain;
      font-family: 'object-fit: contain;'
 }
 .header {
@@ -29,7 +31,7 @@ ul{
           z-index:40;
           left: 0;
           right: 0;
-          top:2%;
+          top: 2%;
         img{
             max-width:100%;
             box-sizing:border-box;
@@ -66,7 +68,7 @@ ul{
     position:relative;
  .sp_navi{
             position:fixed;
-            top: 2%;
+            top: 1%;
             right: 4%;
             z-index:40;
             width:76px;
@@ -152,6 +154,7 @@ main{
     background-image:url("../images/top/about_bg-min.jpg");
     background-repeat:no-repeat;
     background-size:cover;
+    
 
 .flame{
     padding-top:30px;
@@ -204,7 +207,8 @@ h2{
        padding-left:5%;
        padding-bottom:10%;
        position:relative;
-   p{
+   .menu_text{
+       padding-top: 10%;
       span{ 
        background-color:#130d09;
    }
@@ -245,6 +249,7 @@ text-transform: uppercase;
     background-image:url("../images/top/reservation_bg-min.jpg");
     background-size:cover;
     background-repeat:no-repeat;
+    background-attachment: fixed;
     padding-bottom: 50px;
    
   .section_title{
@@ -355,8 +360,11 @@ h5{
    
         .logo{
           width: 25%;
-        }  
-        
+          position:absolute;
+          left: 0;
+          right: 0;
+          top: 20%; 
+        }    
       
      .scroll{
        display:none;
@@ -373,7 +381,7 @@ h5{
         padding-top:20px;
     }
   .about_text{
-      padding: 30px 10px 60px;
+      padding: 0 10px 60px;
       line-height: 2;
       
   }
@@ -401,9 +409,7 @@ h5{
     .flame,.flame_bottom{
            display:none;
     }
-     .section_title{
-        padding-top:60px;
-    } 
+    
 }
 
 .menu{
